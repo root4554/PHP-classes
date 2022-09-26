@@ -1,0 +1,23 @@
+<?php
+namespace Instituto;
+
+
+
+
+
+
+
+
+
+  class Persona  {
+  
+  
+
+  
+  
+  public  function __construct() {
+      
+      
+  }
+}
+

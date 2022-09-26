@@ -1,0 +1,9 @@
+<?php
+namespace Instituto;
+
+class Ordenador {
+    
+    public function __construct(private $os, public $codHZ) {}
+}
+
+echo (new Ordenador('Linux'))->os;

@@ -1,0 +1,23 @@
+<?php
+namespace Instituto;
+
+
+
+
+
+
+
+
+
+  class Aula extends Espacio {
+  
+  
+
+  
+  
+  public  function __construct($puntoWifi,$puntosRed) {
+      parent::__construct($puntoWifi,$puntosRed);
+      
+  }
+}
+

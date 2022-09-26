@@ -1,0 +1,27 @@
+<?php
+namespace Instituto;
+
+trait Getter{
+    public function __get($name) {
+        return $this->$name;
+    }
+}
+trait Setter{
+    public function __set($name, $value){
+        $this->$name = $value;
+    }
+}
+
+class Despachos
+{
+    use Getter;
+    use Setter;
+
+    public $nombre;
+
+    public function __construct($nombre)
+    {
+       $this->nombre = $nombre; 
+    }
+}
+
