@@ -29,7 +29,25 @@ class Aula extends Espacio
         $this->pizarraDigital = $pizarraDigital;
         $this->pantallaTactil = $pantallaTactil;
     }
-    
+    public function addOredenador(Ordenador $ordenador)
+    {
+        if($this->puntosRed < 10){
+            $this->puntosRed++;
+            $this->ordenadores[] = $ordenador;
+        }
+        else "<h3 style='color:red'>El aula está llena</h3>";
+    }
+    public function addOredenadores(array $ordenadores)
+    {
+        foreach($ordenadores as $ordenador)
+        {
+            $this->addOredenador($ordenador);
+        }
+    }
 
 }
+
+    
+
+
 

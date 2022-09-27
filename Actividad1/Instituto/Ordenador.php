@@ -13,20 +13,27 @@ trait Setter{
 }
 
 class Ordenador {
-    use Getter;
-    use Setter;
+    use Getter, Setter;
+    
 
     public $OS;
     public $cofHZ;
-    public $esSobremesa;
+    public bool $esSobremesa;
 
-    public function __construct($OS, $codHZ, $esSobremesa ) {
+    public function __construct($OS, $codHZ, bool $esSobremesa ) {
         $this->OS = $OS;
         $this->codHZ = $codHZ;
         $this->esSobremesa = $esSobremesa;
     }
 
+    public imprimir(){
+        foreach($Ordenador as $key => $value){
+            echo "$key => $value <br>";
+        }
+    }
+
 }
 
-echo (new Ordenador('Linux', 'x'))->OS;
-echo (new Ordenador('Linux', 'x'))->codHZ;
+
+//echo (new Ordenador('Linux', 'x'))->OS;
+//echo (new Ordenador('Linux', 'x'))->codHZ;
