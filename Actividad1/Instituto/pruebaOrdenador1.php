@@ -1,7 +1,9 @@
 <?php
 
-    include 'Ordenador.php';
+    use Instituto\Ordenador;
 
+    include 'Ordenador.php';
+ 
     $ordenador1 = new Ordenador('Win10', 'HZ123456789', true);
     $ordenador2 = new Ordenador('Linux', 'HZ987654321', true);
 
