@@ -5,19 +5,39 @@
     include 'Ordenador.php';
  
     $ordenador1 = new Ordenador('Win10', 'HZ123456789', true);
-    $ordenador2 = new Ordenador('Linux', 'HZ987654321', true);
+    $ordenador2 = new Ordenador('Linux', 'HZ987654321', false);
 
     $ordenadores = [$ordenador1, $ordenador2];
 
-    echo $ordenador1->OS;
-    echo $ordenador1->codHZ;
-    echo $ordenador1->esSobremesa;
+    ////////////////////////////////////////
+    //pruebaOrdenador1.php
+      $ordenador2->imprimir();
 
+
+
+    /////////////////////////////////////////
+     //pruebaOrdenador2.php
+     foreach($ordenadores as $ordenador){
+         $ordenador->imprimir();
+     }
+
+
+
+    /////////////////////////////////////////
+    //pruebaOrdenador3.php
+    foreach($ordenadores as $ordenador){
+        echo "<table border='1'>";
+        echo "<tr><td><b>Ordenador</b></td></tr>";
+        echo "<tr><td>Sistema operativo</td><td>$ordenador->OS</td></tr>";
+        echo "<tr><td>Codigo de pc</td><td>$ordenador->codHZ</td></tr>";
+        echo "<tr><td>Es sobremesa</td><td>$ordenador->esSobremesa</td></tr>";
+        echo "</table>";
+    }
+
+    /////////////////////////////////////////
     
-    $ordenador1->imprimir();
 
-    // $ordenadores = [$ordenador1, $ordenador2];
 
-    // $aula1 = new Aula(true, 0, 1, true, true, true);
 
-    // $aula1->addOredenadores($ordenadores);
+
+

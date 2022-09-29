@@ -26,12 +26,13 @@ class Ordenador {
         $this->esSobremesa = $esSobremesa;
     }
 
-    public imprimir(){
-        foreach($Ordenador as $key => $value){
-            echo "$key => $value <br>";
-        }
+    public function imprimir() {
+        echo "<p>Sistema operativo:<b>&emsp;$this->OS</b></p>";
+        echo "<p> codigo de pc es:<b>&emsp;$this->codHZ</b></p>";
+        echo "<p> Es sobremesa:<b>&emsp;$this->esSobremesa</b></p>";
     }
-
+   
+        
 }
 
 

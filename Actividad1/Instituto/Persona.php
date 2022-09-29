@@ -26,5 +26,27 @@ class Persona
         $this->dni = $dni;
         $this->email = $email;
     }
+    public function printHtml(){
+        echo "<p>Nombre: $this->nombre</p>";
+        echo "<p>DNI: $this->dni</p>";
+        echo "<p>Email: $this->email</p>";
+    }
+
+    public function toHtml(){
+        return "<p>Nombre: $this->nombre</p>
+        <p>DNI: $this->dni</p>
+        <p>Email: $this->email</p>";
+    }
+    //srializar un array de personas y guardar en un fichero
+    public static function guardarPersonas($fichero, $personas){
+        $s = serialize($personas);
+        file_put_contents($fichero, $s);
+    }
+    //leer un fichero y deserializarlo en un array de personas
+    public static function leerPersonas($fichero){
+        $c = file_get_contents($fichero);
+        $personas = unserialize($c);
+        return $personas;
+    }
 }
 
