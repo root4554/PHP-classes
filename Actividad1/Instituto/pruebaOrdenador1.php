@@ -10,13 +10,13 @@
     $ordenadores = [$ordenador1, $ordenador2];
 
     ////////////////////////////////////////
-    //pruebaOrdenador1.php
+    //pruebaOrdenador1
       $ordenador2->imprimir();
 
 
 
     /////////////////////////////////////////
-     //pruebaOrdenador2.php
+     //pruebaOrdenador2
      foreach($ordenadores as $ordenador){
          $ordenador->imprimir();
      }
@@ -24,7 +24,7 @@
 
 
     /////////////////////////////////////////
-    //pruebaOrdenador3.php
+    //pruebaOrdenador3
     foreach($ordenadores as $ordenador){
         echo "<table border='1'>";
         echo "<tr><td><b>Ordenador</b></td></tr>";

@@ -60,28 +60,28 @@ class Persona
         $personas = array_filter($personas, function($persona) use ($dni){
             return $persona->dni != $dni;
         });
-        guardarPersonas("personas.txt", $personas);
+        Persona::guardarPersonas('ListaPersonas.txt', $personas);
         return $personas;
     }
 
-    //modificar una persona de un array de personas
-    public static function modificarPersona($personas, $dni, $nombre, $email){
-        $personas = array_map(function($persona) use ($dni, $nombre, $email){
-            if($persona->dni == $dni){
-                $persona->nombre = $nombre;
-                $persona->email = $email;
-            }
-            return $persona;
-        }, $personas);
-        guardarPersonas("personas.txt", $personas);
-        return $personas;
-    }
+    // //modificar una persona de un array de personas
+    // public static function modificarPersona($personas, $dni, $nombre, $email){
+    //     $personas = array_map(function($persona) use ($dni, $nombre, $email){
+    //         if($persona->dni == $dni){
+    //             $persona->nombre = $nombre;
+    //             $persona->email = $email;
+    //         }
+    //         return $persona;
+    //     }, $personas);
+    //     guardarPersonas("personas.txt", $personas);
+    //     return $personas;
+    // }
 
-    //mostrar personas
-    public static function mostrarPersonas($personas){
-        foreach($personas as $persona){
-            $persona->printHtml();
-        }
-    }
+    // //mostrar personas
+    // public static function mostrarPersonas($personas){
+    //     foreach($personas as $persona){
+    //         $persona->printHtml();
+    //     }
+    // }
 }
 

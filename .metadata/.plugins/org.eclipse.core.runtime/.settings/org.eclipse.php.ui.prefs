@@ -5,6 +5,7 @@ Inherited\ abstract\ methods=1
 PHPDoc\ Blocks=0
 TODOs=0
 eclipse.preferences.version=1
+markOccurrences=false
 org.eclipse.php.core.workspaceDefaultLocale=es_ES
 require_once=0
 useAnnotationsPrefPage=true

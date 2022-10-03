@@ -26,5 +26,7 @@ class Alumno extends Persona
         $this->ciclo = $ciclo;
         $this->codMatricula = $codMatricula;
     }
+
+    
 }
 
